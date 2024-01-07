@@ -8,3 +8,4 @@ joined와 single_table중에 single_table을 사용해보았습니다.
 
 
 
+
