@@ -1,0 +1,19 @@
+
+
+
+1. @Enumerated 활용시 enumtype의 ordinal은 숫자를 1부터 넣어주는데 혹시라도 리스트가 변경될시 감당하기가 힘들어지므로 웬만하면 string으로 해주자!.
+
+2. setter는 가급적 사용금지.(아무데서나 수정할수 있으므로)
+
+3. 연관관계는 즉시로딩(eager)이 아닌 지연로딩(lazy)로 설정하자.  쿼리가 n+1 문제로 많이 나오는경우가 생긴다.
+
+4. (~tomany)의 경우 기본타입이 지연으로 상관없으나 (~toone) 은 기본타입이 eager이므로 변경해주자.
+
+5.  cascade = CascadeType.ALL을 통해 em.persist를 여러번 반복하지말고 한번에 하게 해주자!
+
+6.  서로 @OnetoMany , @ManyToOne 같은경우 양방향 편의메소드를 활용해 한쪽에만 set함수를 만들어 2가지를 서로 이어주자.
+
+7. @Transactional 을 붙여야 할때 읽기만 필요한경우 readonly= true를 해주면 성능을 더 향상시킬수 있다. 전체적으로 필요하다면 메인메서드에 readonly=true를 하고 
+   읽기만 하는곳이 아닌경우에  @Transactional을 붙여서 성능을 향상 시킬수 있다.
+
+8. repository를 가져왔을때 보통 setter로 바꾸는 경우가 경우가 많진 않다. 그럴땐 final을 붙여서 수정을 할수없게하면서 @RequiredArgsConstructor을 붙여서 생성자를 자동으로 생성하게 해주자! 
