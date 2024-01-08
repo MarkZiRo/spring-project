@@ -15,3 +15,5 @@
 
 7. @Transactional 을 붙여야 할때 읽기만 필요한경우 readonly= true를 해주면 성능을 더 향상시킬수 있다. 전체적으로 필요하다면 메인메서드에 readonly=true를 하고 
    읽기만 하는곳이 아닌경우에  @Transactional을 붙여서 성능을 향상 시킬수 있다.
+
+8. repository를 가져왔을때 보통 setter로 바꾸는 경우가 경우가 많진 않다. 그럴땐 final을 붙여서 수정을 할수없게하면서 @RequiredArgsConstructor을 붙여서 생성자를 자동으로 생성하게 해주자! 
