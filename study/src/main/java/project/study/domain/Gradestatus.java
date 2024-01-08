@@ -1,2 +1,5 @@
-package project.study.domain;public enum Gradestatus {
+package project.study.domain;
+
+public enum Gradestatus {
+    correction, complete
 }

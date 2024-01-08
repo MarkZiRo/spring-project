@@ -1,6 +1,7 @@
 package project.study.repository;
 
 import jakarta.persistence.EntityManager;
+import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 import project.study.domain.Student;
@@ -8,10 +9,10 @@ import project.study.domain.Student;
 import java.util.List;
 
 @Repository
-public class MemberRepository {
+@RequiredArgsConstructor
+public class StudentRepository {
 
-    @Autowired
-    private EntityManager em;
+    private final EntityManager em;
 
     public void save(Student student)
     {
@@ -32,6 +33,7 @@ public class MemberRepository {
     public List<Student> findByName(String name)
     {
         return em.createQuery("select s from Student s where s.name = :name", Student.class)
+                .setParameter("name", name)
                 .getResultList();
     }
 }
