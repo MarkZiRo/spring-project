@@ -8,5 +8,5 @@ import lombok.Getter;
 @Getter
 @DiscriminatorValue("M")
 public class Math extends Subject{
-    private String math;
+    private String mathReport;
 }

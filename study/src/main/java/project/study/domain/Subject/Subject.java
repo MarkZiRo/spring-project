@@ -2,6 +2,7 @@ package project.study.domain.Subject;
 
 import jakarta.persistence.*;
 import lombok.Getter;
+import lombok.Setter;
 import project.study.exception.NotEnoughException;
 
 import java.util.ArrayList;
@@ -11,6 +12,7 @@ import java.util.List;
 @Inheritance(strategy = InheritanceType.SINGLE_TABLE)
 @DiscriminatorColumn(name = "dtype")
 @Getter
+@Setter
 public abstract class Subject {
 
     @Id
@@ -20,6 +22,7 @@ public abstract class Subject {
 
     private String name;
     private int score;
+    private String professor;
 
     public void addScore(int number)
     {
@@ -33,7 +36,6 @@ public abstract class Subject {
        {
            throw new NotEnoughException("my number is minus");
        }
-
        this.score = myNumber;
     }
 }
