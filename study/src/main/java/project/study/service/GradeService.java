@@ -11,6 +11,7 @@ import org.springframework.transaction.annotation.Transactional;
 import project.study.domain.*;
 import project.study.domain.Subject.Subject;
 import project.study.repository.GradeRepository;
+import project.study.repository.GradeSearch;
 import project.study.repository.StudentRepository;
 import project.study.repository.SubejctRepository;
 
@@ -62,7 +63,7 @@ public class GradeService {
 
 
 
-    public List<Grade> findGrades(Gradestatus gradestatus)
+    public List<Grade> findGrades(GradeSearch gradeSearch)
     {
         QGrade grade = QGrade.grade;
         QStudent student = QStudent.student;
@@ -75,6 +76,5 @@ public class GradeService {
                 .join(grade.student, student)
                 .limit(1000)
                 .fetch();
-
     }
 }

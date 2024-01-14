@@ -24,8 +24,21 @@ public class GradeRepository {
         return em.find(Grade.class, id);
     }
 
-//    public List<Grade> findAll(Gradestatus gradestatus)
-//    {
-//
-//    }
+    public List<Grade> finalAllWithScholarship() {
+        return em.createQuery(
+                "select g from Grade g"+
+                        " join fetch g.student st"+
+                        " join fetch g.scholarship s", Grade.class
+        ).getResultList();
+    }
+
+    public List<Grade> findAll() {
+        return em.createQuery(
+                "select g from Grade  g" +
+                         " join fetch g.student s" +
+                        " join fetch g.scholarship sh"+
+                        " join fetch g.reportCardList rc"+
+                        " join fetch  rc.subject su", Grade.class)
+                .getResultList();
+    }
 }

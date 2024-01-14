@@ -1,24 +1,14 @@
 <!DOCTYPE HTML>
 <html xmlns:th="http://www.thymeleaf.org">
-<head th:replace="fragments/header :: header"/>
+<head th:replace="~{fragments/header :: header}"/>
 <body>
 <div class="container">
-    <div th:replace="fragments/bodyHeader :: bodyHeader"/>
+    <div th:replace="~{fragments/bodyHeader :: bodyHeader}"/>
     <div>
         <div>
-            <form th:object="${orderSearch}" class="form-inline">
+            <form th:object="${gradeSearch}" class="form-inline">
                 <div class="form-group mb-2">
-                    <input type="text" th:field="*{memberName}" class="formcontrol" placeholder="회원명"/>
-                </div>
-                <div class="form-group mx-sm-1 mb-2">
-                    <select th:field="*{orderStatus}" class="form-control">
-                        <option value="">주문상태</option>
-                        <option th:each=
-                                        "status : ${T(jpabook.jpashop.domain.OrderStatus).values()}"
-                                th:value="${status}"
-                                th:text="${status}">option
-                        </option>
-                    </select>
+                    <input type="text" th:field="*{studentName}" class="formcontrol" placeholder="회원명"/>
                 </div>
                 <button type="submit" class="btn btn-primary mb-2">검색</button>
             </form>
@@ -37,24 +27,23 @@
             </tr>
             </thead>
             <tbody>
-            <tr th:each="item : ${orders}">
-                <td th:text="${item.id}"></td>
-                <td th:text="${item.member.name}"></td>
-                <td th:text="${item.orderItems[0].item.name}"></td>
-                <td th:text="${item.orderItems[0].orderPrice}"></td>
-                <td th:text="${item.orderItems[0].count}"></td>
-                <td th:text="${item.status}"></td>
-                <td th:text="${item.orderDate}"></td>
+            <tr th:each="grade : ${grades}">
+                <td th:text="${grade.id}"></td>
+                <td th:text="${grade.student.name}"></td>
+                <td th:text="${grade.reportCardList[0].subject.name}"></td>
+                <td th:text="${grade.reportCardList[0].score}"></td>
+                <td th:text="${grade.reportCardList[0].id}"></td>
+                <td th:text="${grade.status}"></td>
                 <td>
-                    <a th:if="${item.status.name() == 'ORDER'}" href="#"
-                       th:href="'javascript:cancel('+${item.id}+')'"
+                    <a th:if="${grade.status.name() == 'COMPLETION'}" href="#"
+                       th:href="'javascript:cancel('+${grade.id}+')'"
                        class="btn btn-danger">CANCEL</a>
                 </td>
             </tr>
             </tbody>
         </table>
     </div>
-    <div th:replace="fragments/footer :: footer"/>
+    <div th:replace="~{fragments/footer :: footer}"></div>
 </div> <!-- /container -->
 </body>
 <script>

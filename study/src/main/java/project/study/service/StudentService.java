@@ -48,4 +48,10 @@ public class StudentService {
     {
         return studentRepository.findOne(studentId);
     }
+
+    @Transactional
+    public void update(Long id, String name) {
+        Student student = studentRepository.findOne(id);
+        student.setName(name);
+    }
 }
