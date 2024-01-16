@@ -1,15 +1,13 @@
 package project.study.service;
 
-import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.transaction.annotation.Transactional;
 import project.study.domain.Student;
-import project.study.repository.StudentRepository;
+import project.study.repository.StudentRepositoryJPA;
 
 import static org.assertj.core.api.Assertions.*;
-import static org.junit.jupiter.api.Assertions.*;
 
 @SpringBootTest
 @Transactional
@@ -18,7 +16,7 @@ class StudentServiceTest {
     @Autowired
     StudentService studentService;
     @Autowired
-    StudentRepository studentRepository;
+    StudentRepositoryJPA studentRepository;
 
     @Test
     public void join() throws Exception

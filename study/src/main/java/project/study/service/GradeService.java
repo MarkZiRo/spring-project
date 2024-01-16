@@ -1,23 +1,19 @@
 package project.study.service;
 
-import com.querydsl.core.types.dsl.BooleanExpression;
 import com.querydsl.jpa.impl.JPAQueryFactory;
 import jakarta.persistence.EntityManager;
 import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.data.web.config.EnableSpringDataWebSupport;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import project.study.domain.*;
 import project.study.domain.Subject.Subject;
 import project.study.repository.GradeRepository;
 import project.study.repository.GradeSearch;
-import project.study.repository.StudentRepository;
+import project.study.repository.StudentRepositoryJPA;
 import project.study.repository.SubejctRepository;
 
 import java.util.List;
-
-import static project.study.domain.QGrade.grade;
 
 @Service
 @Transactional(readOnly = true)
@@ -25,7 +21,7 @@ import static project.study.domain.QGrade.grade;
 public class GradeService {
 
     private final GradeRepository gradeRepository;
-    private final StudentRepository studentRepository;
+    private final StudentRepositoryJPA studentRepository;
     private final SubejctRepository subejctRepository;
 
     @Autowired

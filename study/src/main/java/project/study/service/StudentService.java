@@ -1,12 +1,11 @@
 package project.study.service;
 
-import lombok.AllArgsConstructor;
 import lombok.RequiredArgsConstructor;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import project.study.domain.Student;
 import project.study.repository.StudentRepository;
+import project.study.repository.StudentRepositoryJPA;
 
 import java.util.List;
 
@@ -46,12 +45,12 @@ public class StudentService {
 
     public Student findOne(Long studentId)
     {
-        return studentRepository.findOne(studentId);
+        return studentRepository.findById(studentId).get();
     }
 
     @Transactional
     public void update(Long id, String name) {
-        Student student = studentRepository.findOne(id);
+        Student student = studentRepository.findById(id).get();
         student.setName(name);
     }
 }
