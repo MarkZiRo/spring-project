@@ -20,7 +20,7 @@ public class Comment {
     private String content;
     private String password;
 
-    @ManyToOne
+    @ManyToOne(fetch = FetchType.LAZY)
     private Article article;
 
     @Override

@@ -24,7 +24,7 @@ public class Article {
     private String password;
 
     @Setter
-    @ManyToOne
+    @ManyToOne(fetch = FetchType.LAZY)
     private Board board;
 
     @OneToMany(mappedBy = "article")

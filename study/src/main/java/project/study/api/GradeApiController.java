@@ -24,7 +24,7 @@ public class GradeApiController {
     {
         List<Grade> grades = gradeRepository.finalAllWithScholarship();
         return   grades.stream()
-                .map(o -> new SimpleGradeDto(o))
+                .map(SimpleGradeDto::new)
                 .collect(Collectors.toList());
     }
 
