@@ -18,14 +18,65 @@
 <br>
   
 - 제1 정규형은 하나의 컬럼이 복수의 데이터를 가지고 있지 않아야 한다. 
-![image](https://github.com/MarkZiRo/spring-project/assets/37473857/d3b814f2-c959-469d-b8da-f1f7309f232d)
+![image](https://github.com/MarkZiRo/spring-project/assets/37473857/3dc2b6e3-3191-40eb-b7f5-2d6987902c8d)
+
 
 
 <br>
 
 -별도의 테이블에서 관리하기 시작하면 제1정규형 테이블이 2개
-![image](https://github.com/MarkZiRo/spring-project/assets/37473857/b323bcb6-2332-4091-b313-6c5d2207d068)
+
+![image](https://github.com/MarkZiRo/spring-project/assets/37473857/0afee676-863b-4645-96fe-351587c07dac)
+
 
 
 
 <br>
+
+
+-데이터를 좀더 추가해서 아래와 같다면
+
+![image](https://github.com/MarkZiRo/spring-project/assets/37473857/e74fe7d2-82b7-4b49-b9b4-d60e6375d271)
+
+
+
+
+
+<br>
+
+- 기본키에 종속되지 않는 칼럼은 테이블에서 분리되어야 한다.(제2정규형)
+  
+![image](https://github.com/MarkZiRo/spring-project/assets/37473857/757e8898-bfad-42f2-b596-63e1bfe7ac57)
+
+
+
+
+
+
+<br>
+
+- 여기서는 키본키가 아닌 다른 속성에 종속성을 갖는 칼럼은 별도로 분리해야 한다.(제3정규형)
+![image](https://github.com/MarkZiRo/spring-project/assets/37473857/1b975a0b-756b-478e-80cd-dad1ba4227b6)
+
+
+
+
+
+
+<br>
+
+
+- 제조사 국적은 상품자체가 아닌 제조사와 종속적인 관계이기 때문이다.
+
+![image](https://github.com/MarkZiRo/spring-project/assets/37473857/2c6b196b-5e4c-4970-9753-af2f93a4cd14)
+
+
+
+
+
+
+<br>
+
+
+
+
