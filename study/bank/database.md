@@ -205,9 +205,7 @@
 -9 where시 and,or, orderby 활용.
 
 ![image](https://github.com/MarkZiRo/spring-project/assets/37473857/eaeb68d6-cc55-40a8-90fe-28acac2884e5)
-
-![image](https://github.com/MarkZiRo/spring-project/assets/37473857/8f8bc8b0-bf00-4824-9f81-edc4d47356d9)
-
+![image](https://github.com/MarkZiRo/spring-project/assets/37473857/301860aa-30c7-464e-98a0-2958f9e2e330)
 
 
 <br>
