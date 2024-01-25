@@ -30,7 +30,8 @@ spring에서 사용시 아래 그림과 같다. 스프링에서는 이제 스프
 
 - ApplicationContext를 스프링컨테이너라 하며 인터페이스 입니다. 스프링 컨테이너는 설정 정보를 참고해 의존관계를 주입(DI)합니다.
 - 등록된 Bean은 컨테이너가 관리합니다. @Bean(name = "이름) 이런식으로 빈이름을 부여할수도 있습니다.
-- 
+- example.getBean("exam", Exam.class);
+- example.getBean(Exam.class);        이런식으로 검색할수가 있다.
 
 
 <br>
