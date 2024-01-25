@@ -30,4 +30,4 @@
 
 ## Spring
 
-[OOP5](https://github.com/MarkZiRo/spring-project/edit/master/study/bank/Software/OOP5.md)
+[IOC](https://github.com/MarkZiRo/spring-project/edit/master/study/bank/Spring/IOC.md)
