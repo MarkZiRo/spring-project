@@ -15,10 +15,10 @@
 
 ## NetWork
 
-[Http](https://github.com/MarkZiRo/spring-project/edit/master/study/bank/Network/Http.md)
+[Http](https://github.com/MarkZiRo/spring-project/edit/master/study/bank/NetWork/Http.md)
 
-[OSI](https://github.com/MarkZiRo/spring-project/edit/master/study/bank/Network/OSI.md)
+[OSI](https://github.com/MarkZiRo/spring-project/edit/master/study/bank/NetWork/OSI.md)
 
 ## Software
 
-[OOP5](https://github.com/MarkZiRo/spring-project/edit/master/study/bank/Softwarer/OOP5.md)
+[OOP5](https://github.com/MarkZiRo/spring-project/edit/master/study/bank/Software/OOP5.md)
