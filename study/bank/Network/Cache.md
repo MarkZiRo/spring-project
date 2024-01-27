@@ -37,16 +37,14 @@
 
 ### Cache-Control의 종류
 
-- Cache-Control: max-age (캐시 유효시간, 초단위)
-- Cache-Control: no-cache (데이터는 캐시해도 되지만 항상 원서버에 검증하고 사용(혹시라도 원서버만 접근 실패시 오래된 데이터 200 을 준다))
-- Cache-Control: no-store (데이터에 민감한 정보가 있으므로 저장하면 안된다.)
+- Cache-Control: max-age 캐시 유효시간, 초단위
+- Cache-Control: no-cache 데이터는 캐시해도 되지만 항상 원서버에 검증하고 사용(혹시라도 원서버만 접근 실패시 오래된 데이터냐(200) or Error냐 선택을 한다)
+- Cache-Control: no-store 데이터에 민감한 정보가 있으므로 저장하면 안된다.
 - Cache-Control: must-revalidate (원서버에 검증해야된다. 원서버 접근 실패시 504 오류가 난다.)
 
 <br>
 
 ![image](https://github.com/MarkZiRo/spring-project/assets/37473857/2c002ff3-7fd4-4607-aa32-44cc0a080996)
 
-
-<br>
 
 
