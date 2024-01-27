@@ -23,6 +23,8 @@
 
 [URI](https://github.com/MarkZiRo/spring-project/edit/master/study/bank/Network/URI.md)
 
+[HttpMethod](https://github.com/MarkZiRo/spring-project/edit/master/study/bank/Network/HttpMethod.md)
+
 <br>
 
 ## Software
@@ -30,7 +32,6 @@
 [OOP5](https://github.com/MarkZiRo/spring-project/edit/master/study/bank/Software/OOP5.md)
 
 [Web](https://github.com/MarkZiRo/spring-project/edit/master/study/bank/Software/Web.md)
-
 
 [Http Api](https://github.com/MarkZiRo/spring-project/edit/master/study/bank/Software/HttpApi.md)
 
@@ -52,7 +53,5 @@
 
 [3가지 상속전략](https://github.com/MarkZiRo/spring-project/edit/master/study/bank/Jpa/Inheritance.md)
 
-[Basic](https://github.com/MarkZiRo/spring-project/edit/master/study/bank/Spring/Basic.md)
 
-[Scope](https://github.com/MarkZiRo/spring-project/edit/master/study/bank/Spring/Scope.md)
 
