@@ -44,3 +44,15 @@
 [Basic](https://github.com/MarkZiRo/spring-project/edit/master/study/bank/Spring/Basic.md)
 
 [Scope](https://github.com/MarkZiRo/spring-project/edit/master/study/bank/Spring/Scope.md)
+
+
+<br>
+
+## Jpa
+
+[3가지 상속전략](https://github.com/MarkZiRo/spring-project/edit/master/study/bank/Spring/IOC.md)
+
+[Basic](https://github.com/MarkZiRo/spring-project/edit/master/study/bank/Spring/Basic.md)
+
+[Scope](https://github.com/MarkZiRo/spring-project/edit/master/study/bank/Spring/Scope.md)
+
