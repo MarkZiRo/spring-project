@@ -12,7 +12,6 @@
 - Request Header(요청에 대한 정보, 어떤방식인지, 어떤형태의 답을 줘야하는지)
 - Request Body(요청을 통해 전달하고 싶은 실제 데이터)
 
-![image](https://github.com/MarkZiRo/spring-project/assets/37473857/0e38493b-779b-4c5f-934e-e26d0924dc2a)
 ![image](https://github.com/MarkZiRo/spring-project/assets/37473857/4bc7da49-451e-4707-b4ba-41d21e38141f)
 
 <br>
