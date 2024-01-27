@@ -6,67 +6,56 @@
 
 ### HttpMethod의 종류
 
--GET : 리소스 조회, 전달하고 싶은 데이터는 query를 통해서 전달.
+-GET : 리소스 조회, 전달하고 싶은 데이터는 query를 통해서 전달
+
 -POST : 메시지 바디를 통해 서버로 요청 데이터 전달하면 서버는 요청데이터를 처리.
+
 -PUT : 리소스를 완전히 대체함. 게시판 업데이트 같은데 적당하다.
+
 -PATCH : 리소스를 부분 변경한다.
+
 -DELETE : 리소스를 제거한다.
+
 -이외  HEAD, OPTIONS, CONNECT 등도 존재는 한다.
 
 <br>
 
 
-### 데이터 링크 계층(L2)
+### 특징들.
 
-- 데이터를 전송 받을 수 있는 두 기계(Node)사이의 연결 계층
-- 각 기계사이의 데이터를 안전하게 전달하는 역할을 하며 데이터전달을 위해 MAC주소를 사용한다.
+- 멱등(한번 호출하든 두번호출하든 결과가 같다)
+  
+  GET,PUT,DELETE는 몇번을해도 결과는 같다.
+  POST는 멱등이 아니다. 두번호출하면 결제가 중복해서 일어날 수 있다.
+- HTML Form 전송은 GET,POST만 지원.
 
-![image](https://github.com/MarkZiRo/spring-project/assets/37473857/c8eab907-ea31-4cc2-848c-993e1c0a70b9)
+- 정적데이터 조회(이미지,텍스트) GET  /static/star.jpg
+- 동적데이터 조회(쿼리 파라미터 사용) GET (key, value 형식으로 꺼내서 동적으로 생성 주로 검색어나 정렬필터로 사용)
+- HTML Form를 사용한 데이터 전송
+  
+   ![image](https://github.com/MarkZiRo/spring-project/assets/37473857/81fd36bf-21bd-4fda-a524-d472d27889fa)
 
-<br>
+  메시지 바디를 통한 데이터 전송 POST,PUT,PATCH (다양한 기능!)
 
+ ![image](https://github.com/MarkZiRo/spring-project/assets/37473857/3f8069b0-b9c5-4be6-817f-d2dd54c889b0)
 
-### 네트워크 계층(L3)
+ <br>
 
-- 네트워크 계층은 이런 Node의 네트워크 내부의 데이터 전송을 어떻게 할지, 데이터가 크면 데이터의 크기를 조절하기도 한다.
-- 각 기계사이의 데이터를 안전하게 전달하는 역할을 하며 데이터전달을 위해 ip주소를 사용한다.
+ ![image](https://github.com/MarkZiRo/spring-project/assets/37473857/4354f2d7-287a-49c3-b7ef-8ed70421c4af)
 
-![image](https://github.com/MarkZiRo/spring-project/assets/37473857/5362aa62-e2a1-4cdc-9775-b6bb1fafced6)
+ <br>
+ 
 
+- HTTP API를 사용한 데이터 전송
 
-<br>
-
-
-### 전송 계층(L4)
-
-- 실제로 데이터가 의도한대로 전송됬는지 확인하는 역할을 해준다.
-- 데이터가 손실이 있었는지, 있었다면 다시보내고, ip주소의 Port번호를 통해 프로세스를 결정한다.
-- TCP(Transmission Control Protocol)로 실제로 전달할 데이터를 쪼개고, 쪼개진 데이터가 정상적인지를 판단하기 위해 패킷단위로 보낸다.
-
-![image](https://github.com/MarkZiRo/spring-project/assets/37473857/5c997f30-6aca-49dc-8b11-1c81b8d89c62)
-
-
-<br>
-
-
-### 세션 계층(L5) 
-
-- TCP를 비롯한 전송계층 통신의 세션을 관리하는 계층.
-- 두 컴퓨터를 연결하고, 연결을 제어하고, 연결을 중단하는 역할
+  POST,PUT,PATCH,GET 다 사용가능
+  JSON 사용!
 
 <br>
 
 
-### 표현 계층(L6) 
-
-- 전달된 데이터를 사용하는 시스템의 형식에 맞게 변환하는 계층
-- 파일 인코딩, 명령어를 포장, 압축, 암호화 한다.
+### HTML Form을 이용한 API 설계(예시)
 
 <br>
 
-
-### 응용 계층(L7) 
-
-- 그 전달된 데이터가 어떤형태여야 하는지 정의하는 계층(HTTP, SMTP, FTP)
-
-<br>
+![image](https://github.com/MarkZiRo/spring-project/assets/37473857/9542ffbe-9b5a-4e6a-86a2-2aff82401703)
