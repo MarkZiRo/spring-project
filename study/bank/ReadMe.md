@@ -50,7 +50,7 @@
 
 ## Jpa
 
-[3가지 상속전략](https://github.com/MarkZiRo/spring-project/edit/master/study/bank/Spring/IOC.md)
+[3가지 상속전략](https://github.com/MarkZiRo/spring-project/edit/master/study/bank/Jpa/Inheritance.md)
 
 [Basic](https://github.com/MarkZiRo/spring-project/edit/master/study/bank/Spring/Basic.md)
 
