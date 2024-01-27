@@ -15,11 +15,13 @@
 
 ## NetWork
 
-[Http](https://github.com/MarkZiRo/spring-project/edit/master/study/bank/NetWork/Http.md)
+[Http](https://github.com/MarkZiRo/spring-project/edit/master/study/bank/Network/Http.md)
 
-[OSI](https://github.com/MarkZiRo/spring-project/edit/master/study/bank/NetWork/OSI.md)
+[OSI](https://github.com/MarkZiRo/spring-project/edit/master/study/bank/Network/OSI.md)
 
-[TCP,UDP](https://github.com/MarkZiRo/spring-project/edit/master/study/bank/NetWork/TCPUDP.md)
+[TCP,UDP](https://github.com/MarkZiRo/spring-project/edit/master/study/bank/Network/TCPUDP.md)
+
+[URI](https://github.com/MarkZiRo/spring-project/edit/master/study/bank/Network/URI.md)
 
 <br>
 
