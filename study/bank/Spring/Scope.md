@@ -16,7 +16,7 @@
 ### 웹스코프
 - request, session, application, websocket등은 웹환경에서만 작동하는 웹스코프이며 프로토타입과는 다르게 스프링이 종료시점까지 관리한다.
 - 스프링컨테이너는 프로토 타입빈은 생성,의존관계주입, 초기화까지만 하기때문에 @PreDestroy는 실행되지 않는다.
-- 
+  
 ![image](https://github.com/MarkZiRo/spring-project/assets/37473857/09dd14ad-c539-4894-9e53-b693e099b540)
 
 ![image](https://github.com/MarkZiRo/spring-project/assets/37473857/3b7ca3ac-7c04-4ffb-bc5a-6f1594e43ea2)
