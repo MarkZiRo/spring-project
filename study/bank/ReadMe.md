@@ -54,6 +54,8 @@
 
 [Login](https://github.com/MarkZiRo/spring-project/edit/master/study/bank/Spring/Login.md)
 
+[Error](https://github.com/MarkZiRo/spring-project/edit/master/study/bank/Spring/Error.md)
+
 <br>
 
 ## Jpa
