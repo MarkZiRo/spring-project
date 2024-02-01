@@ -43,6 +43,8 @@
 
 [Pattern1](https://github.com/MarkZiRo/spring-project/edit/master/study/bank/Software/Pattern1.md)
 
+[Pattern2](https://github.com/MarkZiRo/spring-project/edit/master/study/bank/Software/Pattern2.md)
+
 <br>
 
 ## Spring
