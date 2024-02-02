@@ -65,6 +65,8 @@
 
 [Transactional](https://github.com/MarkZiRo/spring-project/edit/master/study/bank/Spring/Transactional.md)
 
+[ProxyFactory](https://github.com/MarkZiRo/spring-project/edit/master/study/bank/Spring/CGLIB.md)
+
 <br>
 
 ## Jpa
