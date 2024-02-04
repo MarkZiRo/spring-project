@@ -1,5 +1,16 @@
 # AOP2
 
+### 포인트컷 지시자
+
+@PointCut("execution(" hello.aop.order..*(..))")등을 통해 메소드 실행 조인포인트를 매칭한다.
+- .은 해당 위치의 패키지이며 ..은 하당 위치의 패키지와 하위 패키지도 포함한다.
+
+<br>
+
+![image](https://github.com/MarkZiRo/spring-project/assets/37473857/cfa1409e-7a26-4e90-b4dd-fca8f7d0be10)
+
+<br>
+
 
 ### jdk 동적프록시 , cglib 프록시 차이
 
