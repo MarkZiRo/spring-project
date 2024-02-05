@@ -1,43 +1,31 @@
 # Rest
 
-### 포인트컷 지시자
+### REpresentational State Transfer
 
-@PointCut("execution(" hello.aop.order..*(..))")등을 통해 메소드 실행 조인포인트를 매칭한다.
-- .은 해당 위치의 패키지이며 ..은 하당 위치의 패키지와 하위 패키지도 포함한다.
-
-<br>
-
-![image](https://github.com/MarkZiRo/spring-project/assets/37473857/cfa1409e-7a26-4e90-b4dd-fca8f7d0be10)
+-HTTP를 이용한 서버를 구현할때 지켜야 하는 설계 원칙
 
 <br>
 
-### 주의사항
+1. 서버-클라이언트 구조(Server-Client Architecture) 
+    
+    : 서버는 API 제공, 클라이언트는 유저에 대한 처리를 전담하는 구조를 가짐
+
+      → **서버와 클라이언트의 역할을 분명하게 구분**
+    
+2. 무상태성(Stateless)
+    
+    : HTTP를 이용하는 만큼 각각의 요청에 대한 정보를 저장하지 않고 별개의 요청으로 처리 → 구현이 수비고 서버의 부담을 덜어줌.
+    
+3. 캐시 기능(Cacheable)
+    
+    : HTTP를 사용하기 때문에 웹의 기본 인프라를 사용 가능 → **캐시 기능을 이용해 같은 URL에 대한 반복된 요청을 효율적으로 처리**
+    
+4. 계층 구조(Layered System)
+    
+    : 클라이언트는 대상 서버와 직접 통신하는지 이러한 과정들을 알 필요가 없고, 영향도 받지 않는다. → **클라이언트와 서버의 통신 사이에 중간 계층을 추가**
+    
+5. 일관된 인터페이스 (Uniform Interface)
+    
+    : HTTP를 사용할 수 있는 환경이면 **플랫폼에 상관없이 사용 가능 &**  **리소스의 타입에 상관 없이 같은 형태의 요청으로 처리**
 
 <br>
-
-![image](https://github.com/MarkZiRo/spring-project/assets/37473857/bb84a799-3c00-49aa-b6fc-a8fba008e779)
-
-<br>
-
-- 한 함수에서 바로 내부의 다른 함수를 호출하면 this.internal() 처럼 되기때문에 프록시가 작동하지 않게된다.(프록시 방식의 단점)
-- 이럴때는 아예 다른 클래스로 분류하거나 또는 아예 자신의 클래스.internal()로 가져오거나 또는 지연조회인 ObjectProvider등을 사용하는 방법이 있다.
-
-<br>
-
-### jdk 동적프록시 , cglib 프록시 차이
-
-<br>
-
-![image](https://github.com/MarkZiRo/spring-project/assets/37473857/c0820ae3-7c31-4e16-823e-0db2690076d1)
-
-- jdk 동적프록시의 경우 memberService는 주입이 된다. 그러나 memberserviceImpl은 무엇인지 몰라 주입이 불가능하다.
-
-<br>
-
-![image](https://github.com/MarkZiRo/spring-project/assets/37473857/85d224b1-6f99-4fb4-9a3a-bcf0526fd957)
-
-- 반면 cglib는 애초에 상속관계구성이기 때문에 memberserviceimpl을 기반으로 만들어 졌기때문에
-- 둘다 주입이 가능하다.
-- 그러나 cglib는 상속이기때문에 기본생성자가 필수고,생성자가 두번호출되고, final 키워드가 사용불가한 문제가 있다.
-- 이는 스프링이 objenesis라는 특별한 라이브러리를 사용해 해결하였다.
-- 따라서 현재는 cglib가 기본으로 사용된다!!
