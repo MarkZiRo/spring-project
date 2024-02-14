@@ -17,6 +17,8 @@
 
 [Schema](https://github.com/MarkZiRo/spring-project/edit/master/study/bank/Database/Schema.md)
 
+[Design](https://github.com/MarkZiRo/spring-project/edit/master/study/bank/Database/Design.md)
+
 <br>
 
 ## NetWork
