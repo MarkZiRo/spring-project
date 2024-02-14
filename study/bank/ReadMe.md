@@ -19,6 +19,8 @@
 
 [Design](https://github.com/MarkZiRo/spring-project/edit/master/study/bank/Database/Design.md)
 
+[Structure](https://github.com/MarkZiRo/spring-project/edit/master/study/bank/Database/Structure.md)
+
 <br>
 
 ## NetWork
